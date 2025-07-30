@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
-    "lib": ["ES2023"],
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
     "module": "ESNext",
+    "moduleResolution": "Node",                      // ✅ Fix
+    "resolveJsonModule": true,                       // ✅ Good for config imports
+    "esModuleInterop": true,                         // ✅ Interop default exports
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
+    "jsx": "react-jsx",                              // ✅ Required for JSX
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "noEmit": true
   },
-  "include": ["src", "vite.config.ts"]
+  "include": ["src"]
 }
